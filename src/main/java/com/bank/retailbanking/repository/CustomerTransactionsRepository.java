@@ -7,5 +7,5 @@ import com.bank.retailbanking.entity.CustomerTransactions;
 
 @Repository
 public interface CustomerTransactionsRepository extends JpaRepository<CustomerTransactions, Long> {
-
+List<CustomerTransactions> findByAccountNumber(CustomerAccountDetails accountNumber);
 }
