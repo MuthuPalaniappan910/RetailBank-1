@@ -27,4 +27,23 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 	}
 
+@ExceptionHandler(value = AgeException.class)
+	public ResponseEntity<ErrorResponse> handleException(AgeException exception) {
+		ErrorResponse errorResponse = new ErrorResponse(exception.getMessage());
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_ACCEPTABLE);
+	}
+
+	@ExceptionHandler(value = InvalidRegistrationException.class)
+	public ResponseEntity<ErrorResponse> handleException(InvalidRegistrationException exception) {
+		ErrorResponse errorResponse = new ErrorResponse(exception.getMessage());
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_ACCEPTABLE);
+	}
+	
+	@ExceptionHandler(value = GeneralException.class)
+	public ResponseEntity<ErrorResponse> userException(Exception exception){
+		ErrorResponse errorResponse = new ErrorResponse(exception.getMessage());
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_ACCEPTABLE);	
+	}
+
+
 }
