@@ -28,5 +28,9 @@ public class ApplicationConstants {
 	public static final String TRANSACTION_CREDIT_MESSAGE = "Credit";
 
 	public static final String ACCOUNTNUMBER_INVALID_MESSAGE = "You cannot transfer amount to your account itself";
+	
+	public static final String LOGIN_ERROR="Invalid Credentials";
+	public static final String SUCCESS="Success";
+	public static final Integer TRANSACTION_HISTORY_COUNT=5;
 
 }
